@@ -1,0 +1,36 @@
+{% extends 'reg.html'   %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head> {%block body  %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Made By Satish Pandey</title>
+   <style>
+       p{
+           text-align: center;
+       }
+       span{
+           color:red;
+           
+       }
+   </style>
+</head>
+
+<body>
+    
+    <form id="form">
+    {% for k in obj %}
+    <div class="div1">
+        <p  style="width: 96%;"><span>Customer_Name:- </span>{{k.Customer_Name}}</p>
+        <p><span>Customer_Mobile_no:- </span>{{k.Customer_Mobile_no}}</p>
+        <p><span>Address:- </span> {{k.Address}}</p>
+        <p><span>Salary:- </span>{{k.Salary}}</p>
+    </div>
+    {% endfor %}
+    {%endblock   %}
+</form>
+</body>
+
+</html>
